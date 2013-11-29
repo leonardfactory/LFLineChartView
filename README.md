@@ -1,9 +1,9 @@
 LFLineChartView
 ===============
 
-A view to show line charts on iOS
+A view to show scrollable, highly customizable line charts with parallax effect on iOS.
 
-Screenshot
+![Demo](Demo.gif)
 
 ##Requirements
 
@@ -61,6 +61,13 @@ _.m_
 
 ###Datasource
 Datasource provides content for the chart. Currently, only one set of points is supported.
+
+Lines and dots are rendered using `CAShapeLayer` instances. You can customize them as you want in the `createLayerAtIndex:` and `createLineLayerBetweenIndex:andIndex:` methods, as shown in the example project.
+
+Vertical position (y-axis) is calculated dynamically between maximum and minimum value for `yAtIndex:` for each index. The same happens for size (circle radius) for dots `CAShapeLayer`, using `sizeAtIndex:`.
+
+You can draw horizontal lines across the chart using `createMiddleLineLayerAtIndex:` and related methods.
+`yForMiddleLineAtIndex:` use the same value scale of `yAtIndex:`, so displayed height is automagically calculated.
 
 ```objc
 @protocol LFLineChartViewDataSource <NSObject>
@@ -122,12 +129,19 @@ More options are available to customize LFLineChartView. You can set those direc
 
 > You can find more information on how to implement those methods in the **example**.
 
+##Todo
+
+* Support multiple set of points
+* Write new examples and a better doc
+* Do not use a UIScrollView?
+
 ##Contact
 Leonardo Ascione
 
 * http://github.com/leonardfactory
 * http://twitter.com/leonardfactory
 * me@leonardfactory.com
+
 
 ##License
 Copyright (c) 2013 Leonardo Ascione

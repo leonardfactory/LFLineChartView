@@ -8,6 +8,9 @@
 
 #import "LFViewController.h"
 
+// Importing our custom LineChartView
+#import "LFExampleLineChartView.h"
+
 @interface LFViewController ()
 
 @end
@@ -17,7 +20,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    LFExampleLineChartView *lineChartView = [[LFExampleLineChartView alloc] initWithFrame:self.view.frame andItems:@[@1.4,@2.1,@2.3,@2.5,@0.8,@0.9,@1.5]];
+    [self.view addSubview:lineChartView];
 }
 
 - (void)didReceiveMemoryWarning

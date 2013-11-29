@@ -8,14 +8,10 @@
 
 #import "LFLineChartView.h"
 
-typedef enum _LFAverageMiddleLine
-{
-    LFAverageMiddleLineAverage = 0,
-    LFAverageMiddleLineWeightedAverage = 1
-} LFAverageMiddleLine;
+@interface LFExampleLineChartView : LFLineChartView <LFLineChartViewDataSource, LFLineChartViewDelegate>
 
-@interface LFAverageLineChartView : LFLineChartView <LFLineChartViewDataSource, LFLineChartViewDelegate>
+@property (strong, nonatomic) NSMutableArray *items;
 
-@property (strong, nonatomic) NSMutableArray *exams;
+- (id)initWithFrame:(CGRect)frame andItems:(NSArray *) items;
 
 @end

@@ -21,7 +21,8 @@
 {
     [super viewDidLoad];
     
-    LFExampleLineChartView *lineChartView = [[LFExampleLineChartView alloc] initWithFrame:self.view.frame andItems:@[@1.4,@2.1,@2.3,@2.5,@0.8,@0.9,@1.5]];
+    LFExampleLineChartView *lineChartView = [[LFExampleLineChartView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.height, self.view.frame.size.width)
+                                                                                 andItems:@[@1.4,@2.1,@2.3,@2.5,@0.8,@0.9,@1.5]];
     [self.view addSubview:lineChartView];
 }
 

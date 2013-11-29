@@ -534,13 +534,16 @@ float scaledOffset(float offset)
     UITouch *touch  = [[touches allObjects] objectAtIndex:0];
     CGPoint point   = [touch locationInView:self];
     
-    for(CAShapeLayer *layer in items)
+    if([self.chartDelegate respondsToSelector:@selector(lineChartView:didPressLayerAtIndex:)])
     {
-        CGFloat tolerance = 40.0;
-        CGPoint position  = layer.position;
-        if(CGRectContainsPoint(CGRectMake(position.x-tolerance, position.y-tolerance, tolerance*2, tolerance*2), point))
+        for(CAShapeLayer *layer in items)
         {
-            [self.chartDelegate lineChartView:self didPressLayerAtIndex:[items indexOfObject:layer]];
+            CGFloat tolerance = 40.0;
+            CGPoint position  = layer.position;
+            if(CGRectContainsPoint(CGRectMake(position.x-tolerance, position.y-tolerance, tolerance*2, tolerance*2), point))
+            {
+                [self.chartDelegate lineChartView:self didPressLayerAtIndex:[items indexOfObject:layer]];
+            }
         }
     }
 }

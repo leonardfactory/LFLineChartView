@@ -33,6 +33,8 @@
         
         firstDifferentLineColorIndex = -1;
         
+        self.backgroundColor = [UIColor colorWithRed:172/255.0f green:203/255.0f blue:251/255.0f alpha:1.0f];
+        
         _items = [items copy];
         [self reloadData];
     }
@@ -48,7 +50,7 @@
 - (CAShapeLayer *) lineChartView:(LFLineChartView *)lineChartView createLayerAtIndex:(NSUInteger)index
 {
     CAShapeLayer *layer = [CAShapeLayer layer];
-    layer.fillColor     = [UIColor blueColor].CGColor;
+    layer.fillColor     = [UIColor whiteColor].CGColor;
     return layer;
 }
 
@@ -65,7 +67,7 @@
     CGPathRelease(path);
     
     layer.lineWidth     = 3.0;
-    layer.strokeColor   = [UIColor blackColor].CGColor;
+    layer.strokeColor   = [UIColor colorWithRed:92/255.0f green:96/255.0f blue:219/255.0f alpha:1.0f].CGColor;
     
     // Make it dashed if it's over our defined value. You apply do any customization here.
     if(secondIndex >= firstDifferentLineColorIndex)
@@ -96,7 +98,12 @@
 // -----------------------------------------------------------------
 - (NSString *) textAtIndex:(NSUInteger)index
 {
-    return [NSString stringWithFormat:@"Example %f", [[_items objectAtIndex:index] floatValue]];
+    return [NSString stringWithFormat:@"%0.1f", [[_items objectAtIndex:index] floatValue]];
+}
+
+- (UIColor *) textColor
+{
+    return [UIColor whiteColor];
 }
 
 // -----------------------------------------------------------------

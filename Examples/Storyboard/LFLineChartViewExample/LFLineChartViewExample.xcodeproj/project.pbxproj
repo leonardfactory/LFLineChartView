@@ -21,7 +21,6 @@
 		A7CFD7EE184923E5003D5557 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7CFD7D0184923E5003D5557 /* UIKit.framework */; };
 		A7CFD7F6184923E5003D5557 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7CFD7F4184923E5003D5557 /* InfoPlist.strings */; };
 		A7CFD7F8184923E5003D5557 /* LFLineChartViewExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFD7F7184923E5003D5557 /* LFLineChartViewExampleTests.m */; };
-		A7CFD80B18492439003D5557 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A7CFD80818492439003D5557 /* .gitignore */; };
 		A7CFD80C18492439003D5557 /* LFLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFD80A18492439003D5557 /* LFLineChartView.m */; };
 		A7CFD810184930A0003D5557 /* LFExampleLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7CFD80F184930A0003D5557 /* LFExampleLineChartView.m */; };
 /* End PBXBuildFile section */
@@ -56,7 +55,6 @@
 		A7CFD7F3184923E5003D5557 /* LFLineChartViewExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LFLineChartViewExampleTests-Info.plist"; sourceTree = "<group>"; };
 		A7CFD7F5184923E5003D5557 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A7CFD7F7184923E5003D5557 /* LFLineChartViewExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFLineChartViewExampleTests.m; sourceTree = "<group>"; };
-		A7CFD80818492439003D5557 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A7CFD80918492439003D5557 /* LFLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLineChartView.h; sourceTree = "<group>"; };
 		A7CFD80A18492439003D5557 /* LFLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLineChartView.m; sourceTree = "<group>"; };
 		A7CFD80E184930A0003D5557 /* LFExampleLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LFExampleLineChartView.h; path = ExampleChart/LFExampleLineChartView.h; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 		A7CFD80718492439003D5557 /* LFLineChartView */ = {
 			isa = PBXGroup;
 			children = (
-				A7CFD80818492439003D5557 /* .gitignore */,
 				A7CFD80918492439003D5557 /* LFLineChartView.h */,
 				A7CFD80A18492439003D5557 /* LFLineChartView.m */,
 			);
@@ -259,7 +256,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7CFD80B18492439003D5557 /* .gitignore in Resources */,
 				A7CFD7E5184923E5003D5557 /* Images.xcassets in Resources */,
 				A7CFD7D7184923E5003D5557 /* InfoPlist.strings in Resources */,
 				A7CFD7E0184923E5003D5557 /* Main.storyboard in Resources */,
@@ -494,6 +490,7 @@
 				A7CFD7FD184923E5003D5557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7CFD7FE184923E5003D5557 /* Build configuration list for PBXNativeTarget "LFLineChartViewExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +499,7 @@
 				A7CFD800184923E5003D5557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

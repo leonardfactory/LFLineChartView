@@ -12,5 +12,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'LFLineChartView'
+  s.public_header_files = 'LFLineChartView/*.h'
   s.ios.frameworks = 'QuartzCore', 'CoreText'
 end

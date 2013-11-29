@@ -43,6 +43,22 @@ _.h_
 @end
 ```
 
+_.m_
+```objc
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        self.datasource      = self;
+        self.chartDelegate   = self;
+        
+        // …
+    }
+    return self;
+}
+```
+
 ###Datasource
 Datasource provides content for the chart. Currently, only one set of points is supported.
 
@@ -104,7 +120,7 @@ More options are available to customize LFLineChartView. You can set those direc
 @property (assign) CGFloat textWidth;
 ```
 
-You can find more information on how to implement those methods in the **example**.
+> You can find more information on how to implement those methods in the **example**.
 
 ##Contact
 Leonardo Ascione

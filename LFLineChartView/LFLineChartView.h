@@ -1,6 +1,6 @@
 //
-//  LFExamsChartView.h
-//  MyLibretto
+//  LFLineChartView.h
+//  LFLineChartView
 //
 //  Created by Leonardo on 05/11/13.
 //  Copyright (c) 2013 LeonardFactory. All rights reserved.
@@ -31,9 +31,7 @@ float scaledOffset(float offset);
 
 // Text
 - (NSString *) textAtIndex:(NSUInteger) index;
-- (UIColor *) textColorAtIndex:(NSUInteger) index;
-
-- (NSString *) scoreTextAtIndex:(NSUInteger) index;
+- (UIColor *) textColor;
 
 // Lines
 - (NSUInteger) numberOfMiddleLinesInLineChartView:(LFLineChartView *)lineChartView;

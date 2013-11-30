@@ -144,6 +144,8 @@ Leonardo Ascione
 
 
 ##License
+MIT License
+
 Copyright (c) 2013 Leonardo Ascione
 
 Permission is hereby granted, free of charge, to any person
